@@ -1,0 +1,42 @@
+
+
+
+
+.header {
+    height: 200px;
+    background-color: lightgray;
+    text-align: center;
+    
+}
+
+.main-title {
+    margin-top: 0px;
+    padding-top: 50px;
+}
+
+img {
+    width: 100%;
+}
+
+.featured-image {
+    padding: 20px;
+}
+
+.current-weather {
+    border: 2px solid lightgray;
+    padding: 10px;
+}
+
+.mars-hemis {
+    text-align: center;
+    padding: 40px 80px 10px;
+}
+
+.hemi-image {
+    width: 70%;
+}
+
+.hemi-header {
+    margin-bottom: 40px;
+    font-size: 20px;
+}

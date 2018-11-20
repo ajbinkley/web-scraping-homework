@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Hot Finds</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="stylesheet" href="../static/main.css">
+   </head>
+   <body>
+
+
+
+    <div class='header'>
+        <h1 class='main-title'>
+            Mission to Mars
+        </h1>
+
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Get Mars Data!</a></p>
+
+    </div>
+
+
+
+      <h1>Latest Mars News</h1>
+      <h2>
+         {{ mars_elements.news_title }}
+      </h2>
+      <p>
+         {{ mars_elements.news_paragraph }}
+      </p>
+      <div class="container-fluid">
+         <div class="row">
+            <div class='col-lg-8'>
+               <div class='row-container'>
+                  <h2>
+                     Featured Mars Image
+                  </h2>
+                  <img class='featured-image' src='{{ mars_elements.featured_image_url }}' />
+               </div>
+            </div>
+            <div class='col-lg-4'>
+                <div class='row-container'>
+            <div class='current-weather'>
+            <h2>Current Weather on Mars</h2>
+            <p>
+               {{ mars_elements.mars_weather }}
+            </p>
+            </div>
+            <h2>Mars Facts</h2>
+            {{ mars_elements.mars_facts|safe }}
+         </div>
+         </div>
+         </div>
+         <div class='mars-hemis'>
+         <h1>
+            Mars Hemispheres
+         </h1>
+         <hr>
+         <div class="row">
+            <div class='col-lg-6'>
+               <div class='row-container'>
+                  <img class='hemi-image' src='{{ mars_elements.hemisphere_image_urls[0].img_url }}' />
+                  <h2 class='hemi-header'>{{ mars_elements.hemisphere_image_urls[0].title }}</h2>
+               </div>
+            </div>
+            <div class='col-lg-6'>
+               <div class='row-container'>
+                  <img class='hemi-image' src='{{ mars_elements.hemisphere_image_urls[1].img_url }}' />
+                  <h2 class='hemi-header'>{{ mars_elements.hemisphere_image_urls[1].title }}</h2>
+               </div>
+            </div>
+         </div>
+         <div class="row">
+                <div class='col-lg-6'>
+                   <div class='row-container'>
+                      <img class='hemi-image' src='{{ mars_elements.hemisphere_image_urls[2].img_url }}' />
+                      <h2 class='hemi-header'>{{ mars_elements.hemisphere_image_urls[2].title }}</h2>
+                   </div>
+                </div>
+                <div class='col-lg-6'>
+                   <div class='row-container'>
+                      <img class='hemi-image' src='{{ mars_elements.hemisphere_image_urls[3].img_url }}' />
+                      <h2 class='hemi-header'>{{ mars_elements.hemisphere_image_urls[3].title }}</h2>
+                   </div>
+                </div>
+             </div>
+
+        </div>
+      </div>
+   </body>
+   </div>
+   </div>
+</html>
