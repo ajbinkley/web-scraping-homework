@@ -58,38 +58,26 @@
             Mars Hemispheres
          </h1>
          <hr>
+        
          <div class="row">
+        {% for hemi in mars_elements['hemisphere_image_urls'] %}
+
+
+         
             <div class='col-lg-6'>
                <div class='row-container'>
-                  <img class='hemi-image' src='{{ mars_elements.hemisphere_image_urls[0].img_url }}' />
-                  <h2 class='hemi-header'>{{ mars_elements.hemisphere_image_urls[0].title }}</h2>
+                  <img class='hemi-image' src='{{ hemi.img_url }}' />
+                  <h2 class='hemi-header'>{{ hemi.title }}</h2>
                </div>
             </div>
-            <div class='col-lg-6'>
-               <div class='row-container'>
-                  <img class='hemi-image' src='{{ mars_elements.hemisphere_image_urls[1].img_url }}' />
-                  <h2 class='hemi-header'>{{ mars_elements.hemisphere_image_urls[1].title }}</h2>
-               </div>
-            </div>
-         </div>
-         <div class="row">
-                <div class='col-lg-6'>
-                   <div class='row-container'>
-                      <img class='hemi-image' src='{{ mars_elements.hemisphere_image_urls[2].img_url }}' />
-                      <h2 class='hemi-header'>{{ mars_elements.hemisphere_image_urls[2].title }}</h2>
-                   </div>
-                </div>
-                <div class='col-lg-6'>
-                   <div class='row-container'>
-                      <img class='hemi-image' src='{{ mars_elements.hemisphere_image_urls[3].img_url }}' />
-                      <h2 class='hemi-header'>{{ mars_elements.hemisphere_image_urls[3].title }}</h2>
-                   </div>
-                </div>
-             </div>
+            
+
+
+        {% endfor %}
 
         </div>
-      </div>
-   </body>
    </div>
    </div>
+</body>
+
 </html>
